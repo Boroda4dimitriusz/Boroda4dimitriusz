@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      .container {
+        display: grid;
+        width: 80%;
+        height: 80%;
+        grid-template: 100px 1fr / [start] 2fr[middle] 2fr[end];
+        grid-template-areas:
+          "top main"
+          "aside aside";
+      }
+      header {
+        background-color: yellow;
+        grid-area: "top";
+      }
+      main {
+        background-color: slateblue;
+        grid-area: "main";
+      }
+      aside {
+        background-color: palegreen;
+        grid-area: "aside";
+        grid-column: 1/3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Website</h1>
+      </header>
+      <main>
+        <p>This is the main content of my website.</p>
+      </main>
+      <aside>
+        <p>This is the sidebar of my website.</p>
+      </aside>
+    </div>
+  </body>
+</html>
